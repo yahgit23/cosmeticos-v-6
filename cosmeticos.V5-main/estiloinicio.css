@@ -1,0 +1,93 @@
+/* General */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Container del video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botón Start */
+.start-button {
+  position: fixed;
+  bottom: 10px;  /* Ajustamos la distancia desde la parte inferior */
+  left: 10px;    /* Ajustamos la distancia desde la parte izquierda */
+  background-color: transparent; /* Fondo transparente por defecto */
+  color: #fff;  /* Color de texto blanco */
+  font-weight: bold;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: 2px solid #fff;  /* Borde blanco */
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 2;  /* Asegura que esté sobre el video */
+}
+
+/* Efecto al pasar el mouse sobre el botón Start */
+.start-button:hover {
+  background-color: rgba(255, 87, 34, 0.8); /* Fondo tenue al pasar el mouse */
+  color: #000; /* Cambia el color del texto cuando el mouse pasa */
+}
+
+/* Mariposa */
+.mariposa {
+  position: fixed;
+  top: 10px; /* Ajustamos la distancia desde la parte superior */
+  right: 10px; /* Ajustamos la distancia desde la parte derecha */
+  z-index: 3;  /* Asegura que la mariposa esté encima del video */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mariposa:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la mariposa al pasar el mouse */
+}
+
+/* Puedes agregar el estilo para la imagen de la mariposa aquí si la tienes */
+.mariposa img {
+  width: 50px; /* Ajusta el tamaño de la mariposa */
+  height: auto;
+}
+
+
+/* Estilo para el botón Start */
+.start-button {
+  position: absolute;
+  bottom: 20px;  /* Ajusta la posición según tus necesidades */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;  /* Tamaño más pequeño */
+  background-color: transparent;  /* Fondo transparente */
+  color: white;
+  border: none;
+  font-size: 16px;  /* Fuente más pequeña */
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;  /* Letras en mayúsculas para mayor estilo */
+  font-weight: bold;  /* Resaltar la fuente */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);  /* Efecto de hover */
+  color: #ff9900;  /* Cambio de color al pasar el mouse */
+}
